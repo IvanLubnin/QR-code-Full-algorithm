@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "6Gp45BAXh/21MdvAx9+B6VddlH7AsxqPuCyWPZXzhaV7wf4cSYtE1kUkdDhiTb1g8f1G9CNgYK/NWJgXguS4AQ==",
+  "success": true,
+  "projectFilePath": "C:\\just_project\\just_project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vanya\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\vanya\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

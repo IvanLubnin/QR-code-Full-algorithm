@@ -1,0 +1,91 @@
+using System;
+					
+public class Program
+{
+	const string white = "⬜";
+	const string black = "⬛";	
+	const string red = "🟥";
+
+	public static void FillMatrixSpecialWay(string n) 
+	{
+		Random rnd = new Random();
+		
+		int i = 20;
+		int j = 20;
+		int[,] m;
+		m = FillMatrix(21);
+		for (int c = 1;c<8;c++)	
+			if(i%2==0)
+			{
+				while (c>=0)
+					{
+						int value = rnd.Next(0, 2);
+						j--;
+						m[i,j] = value;
+						j--;
+						value = rnd.Next(0, 2);
+						m[i,j] = value;
+						j++;
+						i--;
+					}
+			}
+			else
+			{
+				while (c>=20)
+					{
+						int value = rnd.Next(0, 2);
+						m[i,j] = value;
+						j--;
+						value = rnd.Next(0, 2);
+						m[i,j] = value;
+						j++;
+						i--;
+				    }
+			}
+		
+		LogMatixTest(m);
+	}
+	
+	public static void WriteColor(int c) {
+		if (c == 0) {
+			Console.Write(white);
+		} else {
+			Console.Write(black);
+		}
+	}
+	
+	public static void LogMatixTest(int[,] matrix) 
+	{
+		
+		int n = 21;
+		
+		for(int j=0;j<n;j++) 
+		{
+			for(int i=0;i<n;i++) 
+			{
+				WriteColor(matrix[j,i]);
+			}
+			Console.WriteLine();
+		}			
+	}
+
+	public static int[,] FillMatrix(int n) 
+	{		
+		int[,] matrix = new int[n, n];
+		for(int j=0;j<n;j++) 
+		{
+			for(int i=0;i<n;i++) 
+			{
+				matrix[j, i] = 0;
+			}			
+		}			
+		return matrix;
+	}
+	
+	public static void Main()
+	{	
+		string n = "01010100100110011001";
+		FillMatrixSpecialWay(n);
+		
+	}
+}
